@@ -1,0 +1,16 @@
+require:
+  - rubocop-rails
+
+inherit_mode:
+  merge:
+    - Include
+    - Exclude
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - test/dummy/**/*
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes

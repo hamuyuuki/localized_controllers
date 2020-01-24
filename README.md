@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/hamuyuuki/localized_controllers.svg?branch=master)](https://travis-ci.com/hamuyuuki/localized_controllers)
+[![Maintainability](https://api.codeclimate.com/v1/badges/22ce36bcfc386745e3b1/maintainability)](https://codeclimate.com/github/hamuyuuki/localized_controllers/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/22ce36bcfc386745e3b1/test_coverage)](https://codeclimate.com/github/hamuyuuki/localized_controllers/test_coverage)
+
 # localized_controllers
 Bring _automagic_ localization to controllers.
 
