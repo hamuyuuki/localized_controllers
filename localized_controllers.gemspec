@@ -7,11 +7,11 @@ require "localized_controllers/version"
 Gem::Specification.new do |spec|
   spec.name        = "localized_controllers"
   spec.version     = LocalizedControllers::VERSION
-  spec.authors     = [""]
-  spec.email       = [""]
-  spec.homepage    = "TODO"
-  spec.summary     = "TODO: Summary of LocalizedControllers."
-  spec.description = "TODO: Description of LocalizedControllers."
+  spec.authors     = ["hamuyuuki"]
+  spec.email       = ["13702378+hamuyuuki@users.noreply.github.com"]
+  spec.homepage    = "https://github.com/hamuyuuki/localized_controllers"
+  spec.summary     = "Bring automagic localization to controllers"
+  spec.description = "Bring automagic localization to controllers."
   spec.license     = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -23,9 +23,9 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  spec.files = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "rails", "~> 5.2.4", ">= 5.2.4.1"
+  spec.add_dependency "actionpack", "~> 5.2.0"
 
   spec.add_development_dependency "sqlite3"
 end
