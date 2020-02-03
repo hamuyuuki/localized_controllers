@@ -1,4 +1,6 @@
-$:.push File.expand_path("lib", __dir__)
+# frozen_string_literal: true
+
+$LOAD_PATH.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
 require "localized_controllers/version"
@@ -27,6 +29,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "actionpack", "~> 5.2.0"
 
-  spec.add_development_dependency "sqlite3"
   spec.add_development_dependency "appraisal"
+  spec.add_development_dependency "sqlite3"
 end
