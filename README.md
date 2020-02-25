@@ -18,6 +18,30 @@ gem "localized_controllers"
 
 ## How to use
 
+`app/controllers/localizable_resources_controller.rb`
+```rb
+class LocalizableResourcesController < ApplicationController
+  def index
+  end
+end
+```
+
+`app/controllers/localizable_resources_en_controller.rb`
+```rb
+class LocalizableResourcesEnController < LocalizableResourcesController
+  def index
+  end
+end
+```
+
+`app/controllers/localizable_resources/en_controller.rb`
+```rb
+class LocalizableResources::EnController < LocalizableResourcesController
+  def index
+  end
+end
+```
+
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/hamuyuuki/localized_controllers. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
