@@ -15,10 +15,18 @@ Or add `localized_controllers` to your Gemfile:
 ```ruby
 gem "localized_controllers"
 ```
+## Prepare before using
+
 
 ## How to use
+For example, You have "/localizable_resources" and `LocalizableResourcesController` for it.
 
-`app/controllers/localizable_resources_controller.rb`
+```rb
+Rails.application.routes.draw do
+  get "localizable_resources", to: "localizable_resources#index"
+end
+```
+
 ```rb
 class LocalizableResourcesController < ApplicationController
   def index
@@ -26,7 +34,12 @@ class LocalizableResourcesController < ApplicationController
 end
 ```
 
-`app/controllers/localizable_resources_en_controller.rb`
+If you'd like to localize `LocalizableResourcesController` to `en` locale, You can run `rails generate localized_controllers` command.
+
+```sh
+rails generate localized_controllers localizable_resorces en
+```
+
 ```rb
 class LocalizableResourcesEnController < LocalizableResourcesController
   def index
@@ -34,13 +47,7 @@ class LocalizableResourcesEnController < LocalizableResourcesController
 end
 ```
 
-`app/controllers/localizable_resources/en_controller.rb`
-```rb
-class LocalizableResources::EnController < LocalizableResourcesController
-  def index
-  end
-end
-```
+By the way, The localized controller is enable to use the localized views.
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/hamuyuuki/localized_controllers. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
