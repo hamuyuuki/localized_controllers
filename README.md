@@ -5,6 +5,12 @@
 # localized_controllers
 Bring _automagic_ localization to controllers.
 
+## Advance preparation
+`localized_controllers` requires to resolve the locale in the rack layer. Please setup any one of them.
+
+- [rack/rack-contrib](https://github.com/rack/rack-contrib)
+- etc...
+
 ## Getting Started
 Install `localized_controllers` at the command prompt:
 ```sh
@@ -15,8 +21,6 @@ Or add `localized_controllers` to your Gemfile:
 ```ruby
 gem "localized_controllers"
 ```
-## Prepare before using
-
 
 ## How to use
 For example, You have "/localizable_resources" and `LocalizableResourcesController` for it.
