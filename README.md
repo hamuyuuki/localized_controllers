@@ -8,7 +8,9 @@ Bring _automagic_ localization to controllers.
 ## Advance preparation
 `localized_controllers` requires to resolve the locale in the rack layer. Please setup any one of them.
 
-- [rack/rack-contrib](https://github.com/rack/rack-contrib)
+- [rack-contrib](https://github.com/rack/rack-contrib)
+- [rack-user-locale](https://github.com/schinery/rack-user-locale)
+- [rack-i18n_locale_switcher](https://github.com/christoph-buente/rack-i18n_locale_switcher)
 - etc...
 
 ## Getting Started
