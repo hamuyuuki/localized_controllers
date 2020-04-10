@@ -3,7 +3,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/22ce36bcfc386745e3b1/test_coverage)](https://codeclimate.com/github/hamuyuuki/localized_controllers/test_coverage)
 
 # localized_controllers
-Bring _automagic_ localization to controllers.
+`localized_controllers` brings _automagic_ localization to controllers. That's inspired by [Localized Views](https://guides.rubyonrails.org/i18n.html#localized-views) in Rails.
 
 ## Advance preparation
 `localized_controllers` requires to resolve the locale in the rack layer. Please setup any one of them.
@@ -12,6 +12,8 @@ Bring _automagic_ localization to controllers.
 - [rack-user-locale](https://github.com/schinery/rack-user-locale)
 - [rack-i18n_locale_switcher](https://github.com/christoph-buente/rack-i18n_locale_switcher)
 - etc...
+
+Or you set the locale to `env["rack.locale"` in the rack layer.
 
 ## Getting Started
 Install `localized_controllers` at the command prompt:
@@ -25,7 +27,7 @@ gem "localized_controllers"
 ```
 
 ## How to use
-For example, You have "/localizable_resources" and `LocalizableResourcesController` for it.
+For example, You have `/localizable_resources` and route it to `LocalizableResourcesController`.
 
 ```rb
 Rails.application.routes.draw do
@@ -43,11 +45,13 @@ end
 If you'd like to localize `LocalizableResourcesController` to `en` locale, You can run `rails generate localized_controllers` command.
 
 ```sh
-rails generate localized_controllers localizable_resorces en
+rails generate localized_controllers LocalizableResourcesController en
 ```
 
+The generator will create `LocalizableResourcesEnController` as the `LocalizableResourcesController` for `en` locale.
+
 ```rb
-class LocalizableResourcesEnController < LocalizableResourcesController
+class LocalizableResourcesEnController < ApplicationController
   def index
   end
 end
