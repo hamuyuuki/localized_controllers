@@ -13,7 +13,7 @@
 - [rack-i18n_locale_switcher](https://github.com/christoph-buente/rack-i18n_locale_switcher)
 - etc...
 
-Or you set the locale to `env["rack.locale"` in the rack layer.
+Or you set the locale to `env["rack.locale"]` in the rack layer.
 
 ## Getting Started
 Install `localized_controllers` at the command prompt:
