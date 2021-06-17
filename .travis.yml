@@ -1,7 +1,7 @@
 # https://docs.travis-ci.com/user/languages/ruby/
 language: ruby
 rvm:
-  - 2.4.9
+  - 2.5
 gemfile:
   - gemfiles/rails_5.2.gemfile
 before_script:
