@@ -1,6 +1,7 @@
 .bundle/
 gemfiles/*.lock
 log/*.log
+node_modules
 pkg/
 test/dummy/db/*.sqlite3
 test/dummy/db/*.sqlite3-journal

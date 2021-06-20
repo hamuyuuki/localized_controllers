@@ -1,0 +1,11 @@
+{
+  "name": "localized_controllers",
+  "description": "Bring automagic localization to controllers.",
+  "scripts": {
+    "lint:format": "prettier --check ."
+  },
+  "devDependencies": {
+    "@prettier/plugin-ruby": "^1.5.5",
+    "prettier": "^2.3.1"
+  }
+}

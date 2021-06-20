@@ -1,6 +1,9 @@
 require:
   - rubocop-rails
 
+inherit_from:
+  - node_modules/@prettier/plugin-ruby/rubocop.yml
+
 inherit_mode:
   merge:
     - Include
