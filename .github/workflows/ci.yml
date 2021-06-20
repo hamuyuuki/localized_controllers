@@ -1,21 +1,17 @@
 name: CI
 on: [push]
 jobs:
-  lint-format:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: "14"
-      - run: npm install
-      - run: npm run lint:format
-  lint-quality-check:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
         with:
           ruby-version: 2.5
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "14"
+      - run: npm install
       - run: bundle install
+      - run: npm run lint:format
       - run: bundle exec rubocop
