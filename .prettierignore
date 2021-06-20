@@ -1,0 +1,4 @@
+vendor/
+gemfiles/*.lock
+node_modules/
+test/dummy/

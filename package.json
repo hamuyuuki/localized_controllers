@@ -1,6 +1,9 @@
 {
   "name": "localized_controllers",
   "description": "Bring automagic localization to controllers.",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "lint:format": "prettier --check ."
   },
