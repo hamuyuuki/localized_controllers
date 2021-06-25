@@ -1,4 +1,4 @@
 vendor/
-gemfiles/*.lock
+gemfiles/
 node_modules/
 test/dummy/
