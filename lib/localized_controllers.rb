@@ -12,9 +12,13 @@ module LocalizedControllers
   def controller(req)
     super(req)
 
-    if req.params["locale"] == "en"
-      return Class.new(LocalizableResourcesEnController)
+    case req.params["locale"]
+    when "en"
+      Class.new(LocalizableResourcesEnController)
+    when "ja"
+      Class.new(LocalizableResourcesJaController)
+    else
+      Class.new(LocalizableResourcesController)
     end
-    Class.new(LocalizableResourcesController)
   end
 end
