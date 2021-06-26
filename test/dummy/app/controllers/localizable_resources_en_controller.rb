@@ -1,5 +1,5 @@
 class LocalizableResourcesEnController < ApplicationController
   def index
-    render body: "routed to LocalizableResourcesEnController"
+    @controller_class_name = "LocalizableResourcesEnController"
   end
 end
