@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
 
   spec.files = Dir["lib/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  spec.add_dependency "actionpack", "~> 5.2.0"
+  spec.add_dependency "actionpack", ">= 5.2"
 
   spec.add_development_dependency "appraisal"
   spec.add_development_dependency "rubocop"
