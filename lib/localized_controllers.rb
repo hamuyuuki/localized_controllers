@@ -3,22 +3,17 @@
 require "active_support/lazy_load_hooks"
 
 ActiveSupport.on_load(:before_initialize) do
-  require "action_dispatch/routing"
-
-  ActionDispatch::Routing::RouteSet::Dispatcher.prepend(LocalizedControllers)
+  ActionDispatch::Request.prepend(LocalizedControllers)
 end
 
 module LocalizedControllers
-  def controller(req)
-    super(req)
+  def controller_class
+    original_controller_class = super
 
-    case req.params["locale"]
-    when "en"
-      Class.new(LocalizableResourcesEnController)
-    when "ja"
-      Class.new(LocalizableResourcesJaController)
+    if path_parameters[:locale]
+      controller_class_for("#{params[:controller]}_#{path_parameters[:locale]}")
     else
-      Class.new(LocalizableResourcesController)
+      original_controller_class
     end
   end
 end
