@@ -9,6 +9,11 @@ gemfile:
   - gemfiles/rails_5.2.gemfile
   - gemfiles/rails_6.0.gemfile
   - gemfiles/rails_6.1.gemfile
+jobs:
+  exclude:
+    # Rails 5.2 moved only supporing 'Severe Security Issues' before Ruby 3 released.
+    - rvm: 3.0
+      gemfile: gemfiles/rails_5.2.gemfile
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
