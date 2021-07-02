@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/hamuyuuki/localized_controllers.svg?branch=master)](https://travis-ci.com/hamuyuuki/localized_controllers)
+[![Build Status](https://travis-ci.com/hamuyuuki/localized_controllers.svg?branch=main)](https://travis-ci.com/hamuyuuki/localized_controllers)
 [![CI](https://github.com/hamuyuuki/localized_controllers/actions/workflows/ci.yml/badge.svg)](https://github.com/hamuyuuki/localized_controllers/actions/workflows/ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/22ce36bcfc386745e3b1/maintainability)](https://codeclimate.com/github/hamuyuuki/localized_controllers/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/22ce36bcfc386745e3b1/test_coverage)](https://codeclimate.com/github/hamuyuuki/localized_controllers/test_coverage)
