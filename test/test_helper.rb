@@ -6,6 +6,7 @@ ENV["RAILS_ENV"] = "test"
 if ENV["CI"]
   require "simplecov"
   SimpleCov.start "rails" do
+    enable_coverage :branch
     add_filter "/test/"
   end
 end
