@@ -2,7 +2,7 @@ Description:
     Explain the generator
 
 Example:
-    rails generate localized_controllers Thing
+    `rails generate localized_controllers LocalizableResources en index show`
 
     This will create:
         what/will/it/create

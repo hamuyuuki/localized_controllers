@@ -1,9 +1,11 @@
-require 'test_helper'
-require 'generators/localized_controllers/localized_controllers_generator'
+# frozen_string_literal: true
+
+require "test_helper"
+require "generators/localized_controllers/localized_controllers_generator"
 
 class LocalizedControllersGeneratorTest < Rails::Generators::TestCase
   tests LocalizedControllersGenerator
-  destination Rails.root.join('tmp/generators')
+  destination Rails.root.join("tmp/generators")
   setup :prepare_destination
 
   # test "generator runs without errors" do
