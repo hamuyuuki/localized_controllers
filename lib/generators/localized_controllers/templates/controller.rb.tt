@@ -1,0 +1,5 @@
+class <%= class_name %><%= locale.camelize %>Controller < ApplicationController
+<% actions.each do |action| -%>
+  def <%= action %>; end
+<% end -%>
+end

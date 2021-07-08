@@ -7,12 +7,15 @@ class LocalizedControllersGenerator < Rails::Generators::NamedBase
   source_root File.expand_path("templates", __dir__)
 
   def create_controller_file
-    create_file "app/controllers/#{file_name}_#{locale}_controller.rb"
+    template "controller.rb",
+             "app/controllers/#{file_name}_#{locale}_controller.rb"
   end
 
   def create_view_files
     actions.each do |action|
-      create_file "app/views/#{file_name}/#{action}.#{locale}.html.erb"
+      @action = action
+      template "view.html.erb",
+               "app/views/#{file_name}/#{action}.#{locale}.html.erb"
     end
   end
 end
