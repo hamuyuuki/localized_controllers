@@ -1,8 +1,17 @@
 Description:
-    Explain the generator
+    Stubs out a new localized controller and its views. Pass the controller name,
+    either CamelCased or under_scored, the locale name and a list of views as
+    arguments.
+
+    To create a localized controller within a module, specify the controller name
+    as a path like 'parent_module/controller_name'.
+
+    This generates a localized controller class in app/controllers and template
+    engine.
 
 Example:
     `rails generate localized_controllers LocalizableResources en index show`
 
-    This will create:
-        what/will/it/create
+    LocalizableResourcesEn controller with URLs like /localizable_resources.
+        Controller: app/controllers/localizable_resources_en_controller.rb
+        Views:      app/views/localizable_resources/index.en.html.erb [...]
