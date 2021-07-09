@@ -8,9 +8,9 @@ class LocalizedControllersGeneratorTest < Rails::Generators::TestCase
   destination Rails.root.join("tmp/generators")
   setup :prepare_destination
 
-  # test "generator runs without errors" do
-  #   assert_nothing_raised do
-  #     run_generator ["arguments"]
-  #   end
-  # end
+  test "should create only the localized controller" do
+    run_generator %w[LocalizableResources en]
+    assert_file "app/controllers/localizable_resources_en_controller.rb"
+    assert_no_file "app/views/localizable_resources/index.en.html.erb"
+  end
 end
