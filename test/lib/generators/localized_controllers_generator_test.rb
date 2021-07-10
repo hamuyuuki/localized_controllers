@@ -26,4 +26,11 @@ class LocalizedControllersGeneratorTest < Rails::Generators::TestCase
     assert_file "app/views/localizable_resources/index.en.html.erb"
     assert_file "app/views/localizable_resources/show.en.html.erb"
   end
+
+  test "should generate the localized controller and its views when the controller name with the module is specified" do
+    run_generator %w[ParentModule::LocalizableResources en index show]
+    assert_file "app/controllers/parent_module/localizable_resources_en_controller.rb"
+    assert_file "app/views/parent_module/localizable_resources/index.en.html.erb"
+    assert_file "app/views/parent_module/localizable_resources/show.en.html.erb"
+  end
 end
