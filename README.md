@@ -29,12 +29,20 @@ gem "localized_controllers"
 
 For example, You have `/localizable_resources` and route it to `LocalizableResourcesController`.
 
+`config/routes.rb`:
+
 ```rb
 Rails
   .application
   .routes
-  .draw { get "localizable_resources", to: "localizable_resources#index" }
+  .draw do
+    scope "(:locale)", locale: /en|ja/ do
+      get "localizable_resources", to: "localizable_resources#index"
+    end
+  end
 ```
+
+`app/controllers/localizable_resources_controller.rb`:
 
 ```rb
 class LocalizableResourcesController < ApplicationController
@@ -42,13 +50,13 @@ class LocalizableResourcesController < ApplicationController
 end
 ```
 
-If you'd like to localize `LocalizableResourcesController` to `en` locale, You can run `rails generate localized_controllers` command.
+If you'd like to localize `LocalizableResourcesController` to `en` locale, You can generate the controller and its views with `rails generate localized_controllers` command.
 
 ```sh
-rails generate localized_controllers LocalizableResourcesController en
+rails generate localized_controllers LocalizableResources en index
 ```
 
-The generator will create `LocalizableResourcesEnController` as the `LocalizableResourcesController` for `en` locale.
+`app/controllers/localizable_resources_en_controller.rb`:
 
 ```rb
 class LocalizableResourcesEnController < ApplicationController
@@ -56,7 +64,46 @@ class LocalizableResourcesEnController < ApplicationController
 end
 ```
 
-By the way, The localized controller is enable to use the localized views.
+`app/views/localizable_resources/index.en.html.erb`:
+
+```html
+This view is the LocalizableResources#index for the en locale.
+```
+
+## Generator
+
+```sh
+$ rails generate localized_controllers
+Usage:
+  rails generate localized_controllers NAME LOCALE [action action] [options]
+
+Options:
+  [--skip-namespace], [--no-skip-namespace]  # Skip namespace (affects only isolated applications)
+
+Runtime options:
+  -f, [--force]                    # Overwrite files that already exist
+  -p, [--pretend], [--no-pretend]  # Run but do not make any changes
+  -q, [--quiet], [--no-quiet]      # Suppress status output
+  -s, [--skip], [--no-skip]        # Skip files that already exist
+
+Description:
+    Stubs out a new localized controller and its views. Pass the controller name,
+    either CamelCased or under_scored, the locale name and a list of views as
+    arguments.
+
+    To create a localized controller within a module, specify the controller name
+    as a path like 'parent_module/controller_name'.
+
+    This generates a localized controller class in app/controllers and template
+    engine.
+
+Example:
+    `rails generate localized_controllers LocalizableResources en index show`
+
+    LocalizableResourcesEn controller with URLs like /localizable_resources.
+        Controller: app/controllers/localizable_resources_en_controller.rb
+        Views:      app/views/localizable_resources/index.en.html.erb [...]
+```
 
 ## Contributing
 
