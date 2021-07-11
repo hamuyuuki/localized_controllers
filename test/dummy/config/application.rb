@@ -17,6 +17,9 @@ module Dummy
 
     # Permitted locales available for the application
     I18n.available_locales = [:en, :ja]
+
+    # This dummy application does not use the database now.
+    config.active_record.maintain_test_schema = false
   end
 end
 
