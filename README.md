@@ -27,7 +27,7 @@ gem "localized_controllers"
 
 ## How to use
 
-For example, You have `/localizable_resources` and route it to `LocalizableResourcesController`.
+For example, You have `/(en|ja)/localizable_resources` endpoint and route it to `LocalizableResources#index`.
 
 `config/routes.rb`:
 
@@ -50,7 +50,7 @@ class LocalizableResourcesController < ApplicationController
 end
 ```
 
-If you'd like to localize `LocalizableResourcesController` to `en` locale, You can generate the controller and its views with `rails generate localized_controllers` command.
+If you'd like to localize `LocalizableResources#index` to `en` locale, You can generate the controller and its views with `rails generate localized_controllers` command. Then you can serve with `LocalizableResourcesEn#index` when `/en/localizable_resources` endpoint is requested.
 
 ```sh
 rails generate localized_controllers LocalizableResources en index
@@ -70,7 +70,7 @@ end
 This view is the LocalizableResources#index for the en locale.
 ```
 
-## Generator
+For more information of `rails generate localized_controllers` command, please see the following:
 
 ```sh
 $ rails generate localized_controllers
