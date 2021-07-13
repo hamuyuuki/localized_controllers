@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/localized_controllers.svg)](https://badge.fury.io/rb/localized_controllers)
 [![Build Status](https://travis-ci.com/hamuyuuki/localized_controllers.svg?branch=main)](https://travis-ci.com/hamuyuuki/localized_controllers)
 [![CI](https://github.com/hamuyuuki/localized_controllers/actions/workflows/ci.yml/badge.svg)](https://github.com/hamuyuuki/localized_controllers/actions/workflows/ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/22ce36bcfc386745e3b1/maintainability)](https://codeclimate.com/github/hamuyuuki/localized_controllers/maintainability)
