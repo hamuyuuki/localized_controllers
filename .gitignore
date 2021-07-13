@@ -3,6 +3,7 @@ gemfiles/*.lock
 Gemfile.lock
 log/*.log
 node_modules
+package-lock.json
 pkg/
 test/dummy/db/*.sqlite3
 test/dummy/db/*.sqlite3-journal
