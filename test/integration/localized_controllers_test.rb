@@ -37,4 +37,15 @@ class LocalizedControllersTest < ActionDispatch::IntegrationTest
                   text:
                     "Rendered to parent_namespace/localizable_resources/index.html.erb"
   end
+
+  test "should localize the controller when '/en/parent_namespace/localizable_resources' endpoint is requested" do
+    get "/en/parent_namespace/localizable_resources"
+
+    assert_select "title",
+                  text:
+                    "Routed to ParentNamespace::LocalizableResourcesEnController"
+    assert_select "body",
+                  text:
+                    "Rendered to parent_namespace/localizable_resources/index.html.erb"
+  end
 end
