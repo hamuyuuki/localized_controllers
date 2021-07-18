@@ -13,7 +13,8 @@ Gem::Specification.new do |spec|
   spec.email = ["13702378+hamuyuuki@users.noreply.github.com"]
   spec.homepage = "https://github.com/hamuyuuki/localized_controllers"
   spec.summary = "Bring automagic localization to controllers"
-  spec.description = "Bring automagic localization to controllers."
+  spec.description =
+    "Bring automagic localization to controllers. That's inspired by Localized Views in Rails."
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.5"
 
